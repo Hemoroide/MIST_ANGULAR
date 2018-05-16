@@ -1,0 +1,49 @@
+<h3>{{errorMsg}}</h3>
+
+<div class="col-sm-8 col-sm-offset-2">
+
+  <form (ngSubmit)="onSubmit()" [formGroup]="armeForm">
+
+      <div class="row">
+        <div class="information col-md-5">
+
+            <div class="form-group">
+              <label for="nomArme">Nom de l'arme *</label>
+              <input type="text" class="form-control" id="nomArme" formControlName="nomArme" >
+            </div>
+
+            <div class="form-group">
+              <label for="profil">Profil</label>
+              <select class="form-control" id="profil" formControlName="typeArme" required>
+                <option value="Pistolet">Pistolet</option>
+                <option value="Fusil">Fusil</option>
+                <option value="Tank">Tank</option>
+                <option value="Battle Station">Battle Station</option>
+              </select>
+            </div>
+          </div>
+        
+      <div class="user col-md-5 offset-md-1">
+          <div class="form-group">
+              <div class="form-group">
+                <label for="typeMunition">Type de munition *</label>
+                <input type="typeMunition" class="form-control" id="typeMunition" formControlName="typeMunition" required>
+              </div>
+            </div>
+
+        <div class="form-group">
+          <label for="numeroSerieArme">Numero de série *</label>
+          <input ngModel type="numeroSerieArme" id="numeroSerieArme" class="form-control" formControlName="numeroSerieArme" required>
+        </div>
+        
+      </div>
+
+      <a>(Les champs précédés d'un * sont obligatoire)</a>
+
+      </div>
+
+      <button type="submit" class="btn btn-primary">Envoyer</button>
+
+    </form>
+
+    </div>

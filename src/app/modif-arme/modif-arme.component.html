@@ -1,0 +1,36 @@
+<div *ngIf="arme" class="col-sm-8 col-sm-offset-2">
+  <form (ngSubmit)="onSubmit(f)" #f="ngForm">
+    <div class="row">
+    <div class="information col-md-5">
+      
+      <div class="form-group">
+        <label for="nomArme">Nom</label>
+        <input type="text" class="form-control" [(ngModel)]="arme.nomArme" id="nomArme" name="nomArme" required>
+      </div>
+      <div class="form-group">
+        <div class="form-group">
+          <label for="typeArme">Type d'arme</label>
+          <input type="text" class="form-control" id="typeArme" name="typeArme" [ngModel]="arme.typeArme" required>
+        </div>
+      </div>
+    </div>
+    <div class="information col-md-5">
+      <div class="form-group">
+        <div class="form-group">
+          <label for="typeMunition">Type de munition</label>
+          <input type="text" class="form-control" id="typeMunition" name="typeMunition" [ngModel]="arme.typeMunition" required>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="form-group">
+          <label for="numeroSerieArme">Numéro de série</label>
+          <input type="text" class="form-control" id="numeroSerieArme" name="numeroSerieArme" [ngModel]="arme.numeroSerieArme" required>
+        </div>
+      </div>
+    </div>
+  </div>
+      
+    <button type="submit" class="btn btn-primary">Envoyer</button>
+    <a class="btn btn-default" routerLink = "../">Retour a la liste</a>
+  </form>
+  </div>
